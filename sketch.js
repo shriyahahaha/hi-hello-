@@ -1,32 +1,26 @@
+
+let traveller = new Walker();
+let babydoll= new Walker();
+let paratha= new Walker();
+let gyatt= new Walker();
+
 function setup() {
-  //we don't set up more than once.
-  createCanvas(700, 400);
-    background('yellow');
-  //creating a yellow canvas.
-  
-  textSize(50);
-  //setting the brush size.
-  
-  
- frameRate (100);
+  createCanvas(400*10, 400*10);
+    background("#FFF8DB");
  
-}
-function keyPressed()
-{
-  background('orange');
+  frameRate(20);
+   traveller.showUp();
 }
 
+
 function draw() {
-  fill(random(0,255));
+//make my traveller do 1 step 
    
-  
-  //a very expensive function, try to put less amt of code in it?
-   //it is a repetitive operation, is run continuously.
-  let posX = mouseX;
-  let posY= mouseY;
-  
-   text('L',posX,posY);
-    //constructing a point
+  traveller.doOneStep();
+babydoll.doOneStep();
+  paratha.doOneStep();
+  gyatt.doOneStep();
  
-    
+  
+
 }
